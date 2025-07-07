@@ -1,0 +1,22 @@
+# Goビルドファイル
+/bin/
+/build/
+*.exe
+*.out
+*.test
+
+# 依存関係キャッシュ
+/vendor/
+
+
+# 環境変数ファイル（機密情報）
+.env
+.env.*
+
+# OS依存ファイル
+.DS_Store
+Thumbs.db
+
+# IDE関連（例：VSCode）
+.vscode/
+.idea/
