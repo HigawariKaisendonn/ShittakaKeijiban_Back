@@ -19,7 +19,7 @@
     │   └── question_interactor.go
     ├── infrastructure/         # インフラ層（DBなど外部実装）
     │   └── supabase_question_repository.go
-    └── interface/              # 外部I/O層（Gin, HTTPなど）
+    └── interface/              # プレゼンテーション層 外部I/O層（Gin, HTTPなど）
         ├── handler/            # HTTPルーティングとリクエスト処理
         │   └── question_handler.go
         └── middleware/
