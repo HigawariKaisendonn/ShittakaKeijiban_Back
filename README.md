@@ -1,7 +1,6 @@
 # ShittakaKeijiban_Back
 - 知ったか掲示板バックエンド
 
-
 ## フォルダ構成
 /your_project_root
 ├── .env
