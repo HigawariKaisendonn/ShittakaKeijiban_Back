@@ -4,6 +4,6 @@ package domain
 
 // userのドメインモデルを定義
 type User struct {
-	Email    string
-	Password string
+	UID  string // ユーザーID(UUID)
+	Name string // ユーザー名
 }
