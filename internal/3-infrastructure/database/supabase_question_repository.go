@@ -1,1 +1,1 @@
-// 質問データを Supabase 経由で取得・保存する処理
+package database

@@ -1,9 +1,8 @@
-// Userエンティティ定義
+package entity
 
-package domain
-
-// userのドメインモデルを定義
+// User はユーザーエンティティです。
 type User struct {
-	UID  string // ユーザーID(UUID)
-	Name string // ユーザー名
+	ID       string `json:"id"`
+	Email    string `json:"email"`
+	Password string `json:"password,omitempty"`
 }

@@ -1,9 +1,9 @@
-// インターフェース定義
+package repository
 
-package domain
+import "ShittakaKeijiban_Back/internal/1-domain/entity"
 
-// UserRepositoryはユーザーに関するデータ操作を定義するインターフェース
-// 実装はDBやAPIなどに依存し、ドメイン層では具体的な保存方法を意識せずに利用できます。
+// UserRepository はユーザーに関するデータ操作を定義するインターフェース
 type UserRepository interface {
-	Register(user *User) error
+	Register(user *entity.User) error
+	Login(email, password string) (string, error)
 }

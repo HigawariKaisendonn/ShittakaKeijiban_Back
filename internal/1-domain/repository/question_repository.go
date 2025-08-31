@@ -1,1 +1,1 @@
-// リポジトリのinterface
+package repository

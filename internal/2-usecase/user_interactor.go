@@ -1,17 +1,26 @@
-// userのユースケースを定義する
-
 package usecase
 
 import (
-	"ShittakaKeijiban_Back/internal/domain" // ドメイン層（エンティティ・リポジトリIF）をインポート
+	"ShittakaKeijiban_Back/internal/1-domain/entity"
+	"ShittakaKeijiban_Back/internal/1-domain/repository"
 )
 
-// UserInteractorはユーザー関連のビジネスロジックを担当する構造体
+// UserInteractor はユーザー関連のビジネスロジックを担当します。
 type UserInteractor struct {
-	UserRepo domain.UserRepository // ユーザーリポジトリのインターフェース
+	UserRepository repository.UserRepository
 }
 
-// RegisterUserは新規ユーザー登録処理を行うユースケース
-func (uc *UserInteractor) RegisterUser(user *domain.User) error {
-	return nil
+// NewUserInteractor は UserInteractor のコンストラクタです。
+func NewUserInteractor(userRepository repository.UserRepository) UserUsecase {
+	return &UserInteractor{UserRepository: userRepository}
+}
+
+// Register は新規ユーザー登録を行います。
+func (ui *UserInteractor) Register(user *entity.User) error {
+	return ui.UserRepository.Register(user)
+}
+
+// Login はログイン処理を行います。
+func (ui *UserInteractor) Login(email, password string) (string, error) {
+	return ui.UserRepository.Login(email, password)
 }
